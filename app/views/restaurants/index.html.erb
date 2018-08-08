@@ -2,9 +2,6 @@
 <% @restaurants.each do |restaurant| %>
   <h2><%= link_to restaurant.name, restaurant_path(restaurant) %></h2>
   <p><%= restaurant.address %></p>
-  <%= link_to "Delete", restaurants_path,
-      method: :delete,
-      data: { confirm: "Are you sure?" } %>
 <% end %>
 
 <h3>Add new restautrant</h3>

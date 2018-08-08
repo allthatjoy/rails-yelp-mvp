@@ -5,5 +5,12 @@
 <p><%= @restaurant.phone_number %></p>
 <p><%= @restaurant.category %></p>
 
+<% @restaurant.reviews.each do |review| %>
+<ul>
+  <li><%= review.content %></li>
+</ul>
+<% end %>
 
+<h3><%= link_to 'Add Reivew', new_restaurant_review_path(@restaurant) %></h3>
+<hr>
 <p><%= link_to 'Go back to restaurant list', restaurants_path %></p>
